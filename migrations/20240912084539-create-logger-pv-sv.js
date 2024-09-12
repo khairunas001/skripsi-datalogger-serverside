@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('loggers', {
+    await queryInterface.createTable('logger_pv_svs', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,13 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       tanggal: {
-        type: Sequelize.STRING
+        type: Sequelize.DATEONLY
       },
       waktu: {
-        type: Sequelize.STRING
+        type: Sequelize.TIME
       },
       suhu: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
+      },
+      sv: {
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +32,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('loggers');
+    await queryInterface.dropTable('logger_pv_svs');
   }
 };

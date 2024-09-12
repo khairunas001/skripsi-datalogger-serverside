@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class logger extends Model {
+  class logger_pv_sv extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +13,14 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  logger.init({
-    tanggal: DataTypes.STRING,
-    waktu: DataTypes.STRING,
-    suhu: DataTypes.INTEGER
+  logger_pv_sv.init({
+    tanggal: DataTypes.DATEONLY,
+    waktu: DataTypes.TIME,
+    suhu: DataTypes.FLOAT,
+    sv: DataTypes.FLOAT
   }, {
     sequelize,
-    modelName: 'logger',
+    modelName: 'logger_pv_sv',
   });
-  return logger;
+  return logger_pv_sv;
 };
