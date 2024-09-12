@@ -143,7 +143,7 @@ class LoggerController {
     }
   }
 
-  // menghapus data logger berdasarkan id
+  // menghapus data logger berdasarkan id data
   static async deleteLogger(req, res) {
     const { id } = req.params;
 
