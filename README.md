@@ -11,7 +11,7 @@ Proyek ini adalah **server side** untuk data logger yang berfungsi menerima data
 ## Persyaratan Sistem
 - **Node.js** (v14.x atau lebih baru)
 - **npm** (v6.x atau lebih baru)
-- Database **MySQL** atau **MariaDB**
+- Database **PostgresSQL** atau **MariaDB**
 
 ## Instalasi
 
@@ -42,21 +42,21 @@ Contoh konfigurasi database:
     "password": null,
     "database": "database_name",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "my"
   },
   "production": {
     "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "my"
   }
 }
 ```
@@ -103,5 +103,5 @@ Aplikasi ini akan berjalan pada port yang diatur di file konfigurasi atau pada d
 
 ## Catatan Tambahan
 
-- Pastikan database MySQL atau MariaDB sudah berjalan sebelum menjalankan aplikasi.
+- Pastikan database PostgresSQL atau MariaDB sudah berjalan sebelum menjalankan aplikasi.
 - Pastikan untuk mengatur konfigurasi database dengan benar di `config/config.json` sebelum memulai aplikasi.
